@@ -7,12 +7,10 @@ var port = 4000;
 //var fs      = require('fs');
 //var vm      = require('vm');
 //include("./dataStructures.js");
-//function include(path) {
-//    var code = fs.readFileSync(path, 'utf-8');
-//    vm.runInThisContext(code, path);
-//}
 
 var usersLang = {};
+var usersHist = {};
+var messageHist = {};
 var messageList = {};
 var messageUnseen = {};
 
@@ -26,10 +24,36 @@ var Message = function (username, from, msg) {
 
 function addMessage(msg) {
 	var user = msg.username;
+	var from = msg.from;
 	if (!messageList[user]) {
 		messageList[user] = [];
 	}
 	messageList[user].push(msg);
+
+	if (!usersHist[user]) {
+		usersHist[user] = [];
+	}
+	usersHist[user].push(msg);
+	if (!usersHist[from]) {
+		usersHist[from] = [];
+	}
+	usersHist[from].push(msg);
+
+
+	if (!messageHist[user]) {
+		messageHist[user] = {};
+	}
+	if (!messageHist[user][from]) {
+		messageHist[user][from] = [];
+	}
+	messageHist[user][from].push(msg);
+	if (!messageHist[from]) {
+		messageHist[from] = {};
+	}
+	if (!messageHist[from][user]) {
+		messageHist[from][user] = [];
+	}
+	messageHist[from][user].push(msg);
 }
 
 function getMessages(username) {
@@ -99,6 +123,15 @@ UserList.prototype.get = function(username) {
 	return this.users[username];
 }
 
+function userCount(from, to) {
+	var key  = langKey(from, to);
+	var list = usersLang[key];
+	if (list) {
+		return list.length;
+	}
+	return 0;
+}
+
 function langKey(from, to) {
 	return from + "_" + to;
 }
@@ -128,9 +161,12 @@ function init() {
     registerUser("c", "zh-CN", "en-US");
     registerUser("d", "zh-CN", "en-US");
     registerUser("e", "zh-CN", "en-US");
+	sendMessage("Hey", "a", "b");
+	sendMessage("Yo", "a", "b");
+	sendMessage("I like you", "b", "a");
+	sendMessage("asds", "c", "a");
 }
 init();
-
 
 app.get('/send/:from/:to/:msg', function(req, res) {
 	res.set("Connection", "close");
@@ -177,6 +213,30 @@ app.get('/random/:user', function(req, res) {
 		console.log("No user: ");
 		res.send({status:"failed"});
 	}
+});
+
+app.get('/count/:from/:to', function(req, res) {
+    res.type('application/json');
+	var from  = req.params.from;
+	var to    = req.params.to;
+	var count = userCount(from, to);
+	res.send({user:count});
+});
+
+app.get('/hist/:user', function(req, res) {
+    res.type('application/json');
+	var user = req.params.user;
+	var list = messageHist[user] || [];
+	var text = JSON.stringify(list);
+	res.send(text);
+});
+
+app.get('/hist/:user/:from', function(req, res) {
+    res.type('application/json');
+	var user = req.params.user;
+	var list = messageHist[user] || [];
+	var text = JSON.stringify(list);
+	res.send(text);
 });
 
 console.log("Connecting to port: " + port);
