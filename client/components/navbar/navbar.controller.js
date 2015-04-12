@@ -3,12 +3,15 @@
 angular.module('llamaApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'home': 'Home',
-      'home_link': '/',
-      'about': 'About',
-      'about_link': '/about',
-      'chat': 'Chat',
-      'chat_link': '/chat'
+      'title': 'Home',
+      'link': '/'
+    },             {
+      'title': 'About',
+      'link': '/about'
+    },             {
+      'title': 'Chat',
+      'link': '/chat'
+    }
     }];
 
     $scope.isCollapsed = true;
