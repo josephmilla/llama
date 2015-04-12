@@ -11,9 +11,8 @@ angular.module('llamaApp')
     },             {
       'title': 'Chat',
       'link': '/chat'
-    }
     }];
-
+    
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
