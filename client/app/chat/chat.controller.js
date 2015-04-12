@@ -9,6 +9,6 @@ angular.module('llamaApp')
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
     
-    $scope.getLanguage = $http.get('/api/register/'+Auth.getCurrentUser().facebook.id);
+    //$scope.getLanguage = $http.get('/api/register/'+Auth.getCurrentUser().facebook.id);
 
   });
