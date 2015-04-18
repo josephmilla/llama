@@ -30,7 +30,6 @@ function addMessage(msg) {
 		messageList[user] = [];
 	}
 	messageList[user].push(msg);
-	console.log(JSON.stringify(messageList));
 
 	if (!usersHist[user]) {
 		usersHist[user] = [];
@@ -171,10 +170,6 @@ function init() {
 init();
 
 app.get('/send/:from/:to/:msg', function(req, res) {
-	// res.setHeader('Access-Control-Allow-Origin', "http://comosellama.azurewebsites.net");
-	// res.setHeader('Access-Control-Allow-Methods', "GET, POST, OPTIONS, PUT, PATCH, DELETE");
-	// res.setHeader('Access-Control-Allow-Headers', "X-Requested-With,content-type");
-	// res.setHeader('Access-Control-Allow-Credentials', "true");
 	res.set("Connection", "close");
 	res.end();
 	var msg  = req.params.msg;
@@ -201,12 +196,6 @@ app.get('/register/:user/:from/:to', function(req, res) {
 
 // 104.236.28.245:4730/get/Gibolt
 app.get('/get/:user', function(req, res) {
-	console.log("a");
-	console.log(req.params.user);
-	// res.setHeader('Access-Control-Allow-Origin', "http://comosellama.azurewebsites.net");
-	// res.setHeader('Access-Control-Allow-Methods', "GET, POST, OPTIONS, PUT, PATCH, DELETE");
-	// res.setHeader('Access-Control-Allow-Headers', "X-Requested-With, content-type");
-	// res.setHeader('Access-Control-Allow-Credentials', "true");
     res.type('application/json');
 	var user = req.params.user;
 	var msgs = getMessages(user) || [];

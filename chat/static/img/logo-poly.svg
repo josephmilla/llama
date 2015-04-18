@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 321.6 360" enable-background="new 0 0 321.6 360" xml:space="preserve">
+<g id="Body">
+	<g id="HexT">
+		<polygon fill="#F05D7D" points="160.8,143 214.4,174 160.8,205 		"/>
+		<polygon fill="#F37888" points="107.2,174 160.8,205 107.2,236 		"/>
+		<polygon fill="#F37888" points="160.8,205 214.4,236 160.8,267 		"/>
+		<polygon fill="#F3C788" points="160.8,205 107.2,174 160.8,143 		"/>
+		<polygon fill="#8C537F" points="160.8,267 107.2,236 160.8,205 		"/>
+		<polygon fill="#F2A4B0" points="214.4,236 160.8,205 214.4,174 		"/>
+	</g>
+	<g id="HexL">
+		<polygon fill="#F05D7D" points="107.2,236 160.8,267 107.2,298 		"/>
+		<polygon fill="#3BA0A8" points="107.2,298 160.8,329 107.2,360 		"/>
+		<polygon fill="#3F6A87" points="53.6,267 107.2,298 53.6,329 		"/>
+		<polygon fill="#F37888" points="160.8,329 107.2,298 160.8,267 		"/>
+		<polygon fill="#275E89" points="107.2,360 53.6,329 107.2,298 		"/>
+		<polygon fill="#F37888" points="107.2,298 53.6,267 107.2,236 		"/>
+	</g>
+	<g id="HexR">
+		<polygon fill="#3BA0A8" points="214.4,298 268,329 214.4,360 		"/>
+		<polygon fill="#F05D7D" points="160.8,267 214.4,298 160.8,329 		"/>
+		<polygon fill="#F3C788" points="214.4,236 268,267 214.4,298 		"/>
+		<polygon fill="#8C537F" points="268,329 214.4,298 268,267 		"/>
+		<polygon fill="#275E89" points="214.4,360 160.8,329 214.4,298 		"/>
+		<polygon fill="#F2A4B0" points="214.4,298 160.8,267 214.4,236 		"/>
+	</g>
+</g>
+<g id="Claws">
+	<g id="ClawR2">
+		<polygon fill="#8C537F" points="246,206.8 248.5,229.8 271,240 282,187 		"/>
+		<polygon opacity="0.6" fill="#37A0A8" points="295.5,137 282,187 246,206.8 		"/>
+		<polygon fill="#3F6A87" points="304.2,184.2 282,187 271,240 		"/>
+		<polygon fill="#4C93CF" points="295.5,137 282,187 304.2,184.2 		"/>
+	</g>
+	<g id="ClawR1">
+		<polygon fill="#3F6A87" points="230.8,156.8 233.8,113.3 262,103.1 		"/>
+		<polygon fill="#8C537F" points="215.5,102 214.4,146 230.8,156.8 233.8,113.3 		"/>
+		<polygon fill="#3B8EB9" points="262,103.1 245.6,61.5 233.8,113.3 		"/>
+		<polygon opacity="0.6" fill="#37A0A8" points="215.5,102 233.8,113.3 245.6,61.5 		"/>
+	</g>
+	<g id="ClawL2">
+		<polygon fill="#8C537F" points="75.6,206.8 73.1,229.8 50.6,240 39.6,187 		"/>
+		<polygon opacity="0.6" fill="#37A0A8" points="26.1,137 39.6,187 75.6,206.8 		"/>
+		<polygon fill="#3F6A87" points="17.4,184.2 39.6,187 50.6,240 		"/>
+		<polygon fill="#4C93CF" points="26.1,137 39.6,187 17.4,184.2 		"/>
+	</g>
+	<g id="ClawL1">
+		<polygon fill="#3F6A87" points="90.8,156.8 87.8,113.3 59.6,103.1 		"/>
+		<polygon fill="#8C537F" points="106.1,102 107.2,146 90.8,156.8 87.8,113.3 		"/>
+		<polygon fill="#3B8EB9" points="59.6,103.1 76,61.5 87.8,113.3 		"/>
+		<polygon opacity="0.6" fill="#37A0A8" points="106.1,102 87.8,113.3 76,61.5 		"/>
+		<polygon fill="#8C537F" points="106.1,102 107.2,146 87.8,113.3 		"/>
+	</g>
+	<g id="ClawC">
+		<polygon fill="#3F6A87" points="160.8,85.8 198.4,49.7 181.8,124.6 		"/>
+		<polygon opacity="0.8" fill="#37A0A8" points="160.8,0 160.8,85.8 198.4,49.7 		"/>
+		<polygon fill="#864A78" points="181.8,124.6 160.8,85.8 139.8,124.6 160.8,110.8 		"/>
+		<g>
+			<polygon fill="#F37888" points="160.8,85.8 123.2,49.7 139.8,124.6 			"/>
+			<polygon fill="#F2A4B0" points="160.8,0 160.8,85.8 123.2,49.7 			"/>
+		</g>
+	</g>
+</g>
+</svg>
